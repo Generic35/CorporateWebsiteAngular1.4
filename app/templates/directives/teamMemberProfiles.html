@@ -1,0 +1,73 @@
+
+<div class="team">
+    <div class="center wow fadeInDown">
+        <h2>Team of Corlate</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+    </div>
+    <div ng-repeat="teamMemberProfile in teamMemberProfiles" ng-if="$index % 2 == 0">
+        <div class="row clearfix">
+            <div class="col-md-4 col-sm-6" ng-class="{'col-md-offset-2':!$first}">	
+                <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img class="media-object" ng-src="{{teamMemberProfiles[$index].imageUrl}}" alt=""></a>
+                        </div>
+                        <div class="media-body">
+                            <h4>{{teamMemberProfiles[$index].name}}</h4>
+                            <h5>{{teamMemberProfiles[$index].role}}</h5>
+                            <ul class="tag clearfix">
+                                <li ng-repeat="skill in teamMemberProfiles[$index].skills" class="btn"><a href="#">{{skill.name}}</a></li>
+                            </ul>
+                            
+                            <ul class="social_icons">
+                                <li><a ng-href="{{teamMemberProfiles[$index].facebookProfileUrl}}"><i class="fa fa-facebook"></i></a></li>
+                                <li><a ng-href="{{teamMemberProfiles[$index].twitterProfileUrl}}><i class="fa fa-twitter"></i></a></li> 
+                                <li><a ng-href="{{teamMemberProfiles[$index].googlePlusProfileUrl}}><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!--/.media -->
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                </div>
+            </div><!--/.col-lg-4 -->
+            <div class="col-md-4 col-sm-6 col-md-offset-2">	
+                <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img class="media-object" ng-src="{{teamMemberProfiles[$index+1].imageUrl}}" alt=""></a>
+                        </div>
+                        <div class="media-body">
+                            <h4>{{teamMemberProfiles[$index + 1].name}}</h4>
+                            <h5>{{teamMemberProfiles[$index + 1].role}}</h5>
+                            <ul class="tag clearfix">
+                                <li ng-repeat="skill in teamMemberProfiles[$index + 1].skills" class="btn"><a href="#">{{skill.name}}</a></li>
+                            </ul>
+                            <ul class="social_icons">
+                                <li><a ng-href="{{teamMemberProfiles[$index + 1].facebookProfileUrl}}"><i class="fa fa-facebook"></i></a></li>
+                                <li><a ng-href="{{teamMemberProfiles[$index + 1].twitterProfileUrl}}><i class="fa fa-twitter"></i></a></li> 
+                                <li><a ng-href="{{teamMemberProfiles[$index + 1].googlePlusProfileUrl}}><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!--/.media -->
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                </div>
+            </div><!--/.col-lg-4 -->					
+        </div> <!--/.row -->
+        <div ng-if="$index % 3 == 0" class="row team-bar">
+            <div class="first-one-arrow hidden-xs">
+                <hr>
+            </div>
+            <div class="first-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-up"></i>
+            </div>
+            <div class="second-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="third-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-up"></i>
+            </div>
+            <div class="fourth-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-down"></i>
+            </div>
+        </div> <!--skill_border-->
+    </div>       
+</div><!--section-->

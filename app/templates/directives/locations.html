@@ -1,0 +1,18 @@
+<ul class="row">
+    <li class="col-sm-6" ng-repeat="location in locations" ng-if="$index % 2 == 0">
+        <address>
+            <h5>{{locations[$index].title}}</h5>
+            <p>{{locations[$index].street}}<br>
+            {{locations[$index].city}}, {{locations[$index].state}} {{locations[$index].zip}}</p>
+            <p>Phone:{{locations[$index].phone}} <br>
+            Email Address:{{locations[$index].email}}</p>
+        </address>
+        <address ng-if="locations.length > ($index + 1)">
+            <h5>{{locations[$index + 1].title}}</h5>
+            <p>{{locations[$index + 1].street}}<br>
+            {{locations[$index + 1].city}}, {{locations[$index + 1].state}} {{locations[$index + 1].zip}}</p>
+            <p>Phone:{{locations[$index + 1].phone}} <br>
+            Email Address:{{locations[$index + 1].email}}</p>
+        </address>
+    </li>
+</ul>

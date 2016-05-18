@@ -1,0 +1,7 @@
+<div ng-repeat="clientComment in clientComments" class="col-md-4 wow fadeInDown">
+    <div class="clients-comments text-center">
+        <img src="{{clientComment.imageUrl}}" class="img-circle" alt="">
+        <h3>{{clientComment.comment}}</h3>
+        <h4><span>-{{clientComment.name}} /</span>  {{clientComment.role}}</h4>
+    </div>
+</div>
